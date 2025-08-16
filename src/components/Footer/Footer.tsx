@@ -1,0 +1,152 @@
+import React from "react";
+import logo from "@/assets/logo/titaswebWhite.png";
+import Image from "next/image";
+import {
+  Facebook,
+  Instagram,
+  MailPlus,
+  MapPinHouse,
+  Phone,
+  Twitter,
+  Youtube,
+  Linkedin,
+  Github,
+} from "lucide-react";
+import Link from "next/link";
+const Footer = () => {
+  return (
+    <div className="bg-[#1D273E] py-12 Container">
+      <div className="grid lg:grid-cols-4 md:grid-cols-2 lg:gap-2 gap-4 pt-10">
+        <div className="">
+          <Image src={logo} alt="Logo" width={140} height={140} />
+          <div className="text-white/80 mt-6">
+            <p className="text-sm">
+              Titaswab nec nisl a purus blandit viverra. Pellentesque habitant
+              morbi tristique senectuse.
+            </p>
+
+            <div className="flex flex-col gap-2 mt-4">
+              <p className="flex items-center gap-2 text-sm">
+                <span>
+                  <MapPinHouse size={16} />
+                </span>{" "}
+                <span>Kawlar Main Rd, Dhaka 1230,
+Bangladesh, Dhaka</span>
+              </p>
+              <p className="flex items-center gap-2 text-sm">
+                <span>
+                  <Phone size={16} />
+                </span>{" "}
+                <span><a href="tel:+8801313-186576">+8801313-186576</a></span>
+              </p>
+              <p className="flex items-center gap-2 text-sm">
+                <span>
+                  <MailPlus size={16} />
+                </span>{" "}
+                <span><a href="mailto:nazmuss024@gmail.com">nazmuss024@gmail.com</a></span>
+              </p>
+            </div>
+          </div>
+        </div>
+        <div className="md:ml-16">
+          <h2 className="text-white text-base">Our Company</h2>
+
+          <ul className="text-white/60 mt-4 flex flex-col gap-2 cursor-pointer text-sm">
+            <Link href="/about">
+              <li className="hover:ml-2 hover:text-primary duration-300 cursor-pointer">
+                About Us
+              </li>
+            </Link>
+            <Link href="/contact">
+              <li className="hover:ml-2 hover:text-primary duration-300 cursor-pointer">
+                Contact Us
+              </li>
+            </Link>
+            <Link href="/product">
+              <li className="hover:ml-2 hover:text-primary duration-300 cursor-pointer">
+                Shop
+              </li>
+            </Link>
+            <Link href="/blogs">
+              <li className="hover:ml-2 hover:text-primary duration-300 cursor-pointer">
+                Blogs
+              </li>
+            </Link>
+            <li className="hover:ml-2 hover:text-primary duration-300 cursor-pointer">
+              Our Store
+            </li>
+            <li className="hover:ml-2 hover:text-primary duration-300 cursor-pointer">
+              FAQ
+            </li>
+          </ul>
+        </div>
+        <div>
+          <h2 className="text-white text-base">Quick links</h2>
+
+          <ul className="text-white/60 mt-4 flex flex-col gap-2 cursor-pointer text-sm">
+            <Link href="/privacy-policy">
+              <li className="hover:ml-2 hover:text-primary duration-300 cursor-pointer">
+                Privacy Policy
+              </li>
+            </Link>
+            <Link href="/terms-conditions">
+              <li className="hover:ml-2 hover:text-primary duration-300 cursor-pointer">
+                Terms & Conditions
+              </li>
+            </Link>
+            <Link href="/return-policy">
+              <li className="hover:ml-2 hover:text-primary duration-300 cursor-pointer">
+                Return Policy
+              </li>
+            </Link>
+            <Link href="/order-policy">
+              <li className="hover:ml-2 hover:text-primary duration-300 cursor-pointer">
+                Order Policy
+              </li>
+            </Link>
+          </ul>
+        </div>
+        <div>
+          <h2 className="text-white text-base">Sign Up to Newsletter</h2>
+
+          <div className="mt-4">
+            <p className="text-sm text-white/60">
+              Subscribe for store updates and discounts.
+            </p>
+
+            <form className="mt-4">
+              <input
+                className="border border-white/60 px-4 py-3 text-white outline-none text-sm w-full"
+                type="text"
+                placeholder="Your Email.."
+              />
+
+              <input
+                className="px-4 py-3 rounded hover:bg-primary duration-300 cursor-pointer bg-secondary text-white text-sm mt-2"
+                type="submit"
+                value="Subscribers"
+              />
+            </form>
+
+            <div className="flex items-center gap-2 mt-4">
+              <a href="https://www.facebook.com/profile.php?id=61566546872050" target="_blank" className="p-1.5 border rounded text-white/60 hover:text-white duration-300 cursor-pointer">
+                <Facebook size={16} />
+              </a>
+              <a href="https://www.linkedin.com/company/fabtech-it" target="_blank" className="p-1.5 border rounded text-white/60 hover:text-white duration-300 cursor-pointer">
+                <Linkedin size={16} />
+              </a>
+              <a href="https://github.com/fabtechit" target="_blank" className="p-1.5 border rounded text-white/60 hover:text-white duration-300 cursor-pointer">
+                <Github size={16} />
+              </a>
+              {/* <p className="p-1.5 border rounded text-white/60 hover:text-white duration-300 cursor-pointer">
+                <Youtube size={16} />
+              </p> */}
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+};
+
+export default Footer;
